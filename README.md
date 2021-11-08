@@ -34,7 +34,32 @@ If a customer orders a product from your website, the receipt sent via email is 
 </details>
 
 <details><summary>Email Content Creation</summary>
+
+#### Content Personalization
+In the world of digital marketing, content is typically characterized as either static or personalized. Static content does not change for any reason, for example, the company logo at the top of an email or social links at the bottom (header and footer). Personalized content changes based on data found in the data extension or list at the time of a send or push, for example, a person’s name within a text or specific content related to their interests.
   
+- Personalized content: 
+  1. Personalization strings (%): Insert subscriber attributes, such as subscriber name, into the subject line, preheader, or content of your email. These can be People or System attributes. Note they are case-insensitive, and should always have a default value set.
+  2. Dynamic content: Display content according to rules that you define based on the subscriber’s attributes or data extension field values. Select Subscriber/Send Preview to see how Dynamic Content and AMPscript renders in an email (can set country to specific images).
+  3. AMPscript: Use this scripting language to embed subscriber-specific content within HTML emails, text emails, landing pages, SMS messages, and push notifications from MobilePush.
+
+- Dynamic Header/Pre–Header: You can set a rule to change the header/pre-header based on subscriber attributes. E.g. if an individual has a birthday coming up, a rule can be set to say ‘Happy Birthday!’ in the header/pre-header
+  
+#### Content Blocks
+- A/B Testing
+- Button
+- Code Snippet
+- Dynamic Content (a more tailored message reaches segmented audience)
+- Enhanced Dynamic Content (import to content builder)
+- External Content (reference from a URL)
+- Free Form (links, images)
+- HTML
+- Image Block
+- Image Carousel
+  
+#### Create Email
+  
+#### Create Content Blocks & Email
 
   
 </details>
