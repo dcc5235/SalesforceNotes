@@ -58,10 +58,26 @@ In the world of digital marketing, content is typically characterized as either 
 - Image Carousel
   
 #### Create Email
+1. SF provides various templates, but you can choose your own email creation process. 
+  - Template Based: Choose this option if you already have a template that you’re using for this email.
+  - HTML Paste: Choose this option to type or paste HTML code for an email into the editor.
+  - Text Only: Choose this option if you want to create an email that displays as text only in your subscribers’ inbox regardless of their display preferences. Opens data is never reported for text-only emails.
+  - Unprocessed HTML Paste: Choose this option if you want to create an HTML-based email that you do not want to be affected by the application. No validation, personalization strings, or other manipulations are done to the email’s content.
+  - Unprocessed Text Only: Choose this option if you want to create a text-only email that you don’t want to be affected by the application. No validation, personalization strings, or other manipulations are done to the email’s content. 
+  - Simple Automated Email: Choose this option if you want to create an email you send based on a date attribute. For example, if you want to send your subscribers an email on their birthday, you can create an automated email.
+2. Add content - SF includes code snippets.
+  - Physical Mailing Address (Required per CAN-SPAM)
+  - Forward to a Friend
+  - View Email as Webpage
+  - Privacy Policy
+  - Unsubscribe Center
+  - Profile Center (Required per CAN-SPAM)
+3. Preview & test - test emails based on subscriber preview & attributes.
   
 #### Create Content Blocks & Email
+You can create a wide range of content blocks with Marketing Cloud, including text, image, text + image, free form, HTML content, dynamic content, A/B testing, button, social share, add a social Follow Block,layouts, external content, reference, and image carousel.
 
-  
+Note: Link Title is the text that describes the link to the subscriber.
 </details>
 
 <details><summary>Email Delivery</summary>
