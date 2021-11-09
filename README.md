@@ -81,8 +81,25 @@ Note: Link Title is the text that describes the link to the subscriber.
 </details>
 
 <details><summary>Email Delivery</summary>
-  
+At this stage of the email send flow, you can edit the email, see its properties, copy location of email, etc. Next, define properties, select audience, configure delivery (send immediately or schedule delivery, track clicks), then review and send. 
 
+  1. Define Properties: Edit the subject line, preheader, from options, and send classification.
+  2. Select Audience: Select the audience you want to target and any you want to exclude or suppress. You can send to all audience types, including sales Cloud Reports and Campaigns.
+  3. Configure Delivery: Configure your schedule, send throttling, and any advanced options.
+  4. Review and Send: Preview the selected email, review send configurations, correct errors, and send.
+  
+Subscriber Preview in Content Builder allows you to view a single email, including
+- dynamic content,
+- A/B testing,
+- personalization
+  
+Note: Use Subscriber Preview to see exactly what the email will look like to an individual subscriber in a data extension.
+
+#### User Initiated vs Triggered Emails
+  
+User Initiated Send is a method where you can specify and target specific components such as email, audience, suppressions, etc. You are able to schedule sends with those on demand or you could trigger them via API.
+
+A Triggered Send is listening for an action most like done via an API call to initiate the send. For example, a customer form fill-out, a purchase will trigger a response email built in the Marketing Cloud. This can be built in Interactions in Email Studio.
   
 </details>
 
