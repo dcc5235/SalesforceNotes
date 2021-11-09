@@ -104,9 +104,41 @@ A Triggered Send is listening for an action most like done via an API call to in
 </details>
 
 <details><summary>Email Message Design</summary>
-  
 
+#### Email Sender Definitions
+
+- Sender Profile: Specifies the ‘From’ information – From Name, From Email, Description of the Sender
+- Delivery Profile: Specifies the IP Address the email is sending from, as well as configuring a standard Header and Footer profile
+- Send Classification: Defines the CAN-SPAM classification of the email (i.e. if the message is transactional or promotional), plus groups together the Send Profile, Delivery Profile, and Send Priority of each classification
+- Send Throttle: Allows you to send emails during the hours you specify, starting the day you send the email until all messages are sent. Example: This can be configured that emails are only sent between 9am-5pm ET each day.
+
+#### Mobile vs Responsive Templates
+
+Mobile aware are user design tactics to create a single, mobile-friendly template that can work across all screen types. Often they are therefore:
+- single column,
+- using large text,
+- images, and buttons,
+- and spaced out buttons and links.
+
+Responsive templates are designed to be responsive, serving up versions of an email that are optimized for a screen. It often involves extra coding or additional template design.  When coding a responsive design for email, CSS3 Media Queries are used to activate the mobile version.
   
+#### Testing Tools within the Marketing Cloud
+- A/B Testing
+In Marketing Cloud you can perform A/B testing on:
+ - Subject Lines
+ - Emails
+ - From Names
+ - Content Areas
+ - Send Date and Time
+ - Pre-headers
+
+Note that in A/B testing, you select the desired audience test segment sizes and the system automatically sends the winning version to the remainder audience.  Not the other way around.  And also you CANNOT select individual subscribers, you only select the segment sizes.
+
+#### Testing Tools within the Marketing Cloud:
+- Content Detective – Spam filtering software to identify words, patterns, and phrases that are likely to trigger spam filters. It also suggests solutions to potential problems. It does not scan HTML code.
+- Validation – Will confirm Correct field syntax, content and data being used for Dynamic Rules are being used correctly, Guide Template Language and AMPScript is being used correctly and also validates for the presence of Unsubscribe link and From Email address.
+- Send Preview – Allows you to see how your email will render with Personalisation strings populated, Dynamic content displaying based on subscriber data, and Guide Template Language and AMPScript will be executed and the data will be displayed or the content will be rendered.
+- Test Send – Allows you to see how content will render, will send up to 5 email addresses at once, though personalization does not populate, dynamic content displays default content, AMPscript code and Guide Template Language is displayed, and not all links are active.
 </details>
 
 <details><summary>Marketing Automation</summary>
