@@ -142,8 +142,47 @@ Note that in A/B testing, you select the desired audience test segment sizes and
 </details>
 
 <details><summary>Marketing Automation</summary>
-  
 
+#### Automation Tools
+1. Playbooks – step-by-step guides for executing digital marketing through the customer lifecycle. 3 are available: Welcome series, Birthday email, and Customer Anniversary 
+
+NOTE: Playbooks will no longer be supported from January 2019. They are featured in Journey Builder for quick starts.
+
+2. Triggered Emails – Message sent to an individual executed from an event that happens outside the Marketing Cloud (e.g. sign up, form fill-out etc.). Triggered emails include Welcome emails, Purchase Confirmation, Abandon Shopping Cart, or Shipping Notices
+3. Journey Builder – 1:1 marketing engine that allows you to build real-time messages in customer journeys across online and offline channels based on customer behaviour. Used for customer lifecycle programs. Includes Journey Builder templates such as Abandon Cart, Anniversary Send, Onboarding/Welcome
+4. API – For technical resources. The API source code allows applications to communicate with one another.
+5. Automation Studio – Drag and Drop interface to define a workflow that automates various activities. E.g. import data, refresh segments, export data, or send emails.
+  
+#### Automation Studio
+Steps to build an automation
+
+1. Select the Type of Automation:
+  - Scheduled – Based on a schedule you define the date and time to start the automation, how often the automation is to execute, and when the automation is to stop
+  - Triggered/File Drop (Note this has been renamed to ‘File Drop’) – Automation will start as soon as a file is placed on your designated enhanced FTP.
+2. Build your automation workflow with Steps and Activities
+
+Workflow – Your Automation canvas where you define and create your Automation
+
+Steps – The order in which activities are to be executed
+
+Activities – A task to be executed in Automation Studio
+
+An automation can have multiple steps. Each step can have multiple activities. All activities within a step execute concurrently, and all activities in the step must execute successfully before moving to the next step. 
+
+#### Activities
+
+- Data Extract Activity – It gives you the ability to extract tracking information or data from a data extension. This allows you to transform an XML file into a comma-delimited, tab-delimited, or pipe-delimited format for you to import into Email
+- Import File Activity – Will import the file from an FTP site to a list or data extension.
+- File Transfer Activity – Allows you to de-encrypt or unzip a file or to take a file that has been extracted and place it on the FTP location.
+- Filter Activity – Applies the data filter to a list or a data extension and places the results in a filtered list or filtered data extensions. The filter only works on 1 Data Extension
+- Refresh Group Activity – Used with lists only. Takes the criteria for the group and applies it to the list to refresh the segment.
+- SQL Query Activity – Takes the SQL statement and applies it to the specified data extension. The records meeting the criteria are placed in a resulting data extension. SQL can run on multiple data extensions.
+- Send Email Activity – Allows you to choose a User-Initiated Email definition to execute or allows you to define the parameters for the Send.
+- Verification Activity - Avoid unintended outcomes by verifying the data used in an Automation Studio automation.
+- Script Activity - A Server-Side JavaScript activity contains your Server-Side JavaScript and executes that script when started, either on its own or as part of automation in Automation Studio.
+- Wait Activity - Wait activities in Automation Studio cause automation to wait for a specific duration or until a specific time before performing the next step. You can include one or multiple wait activities in single automation.
+
+NOTE – You must define the activities in their respective application prior to setting up automation. E.g. define File Import, or configure Email/ SMS send
   
 </details>
 
