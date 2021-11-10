@@ -252,9 +252,35 @@ Sendable Data Extension: A Data extension that you can send emails to. You need 
 </details>
 
 <details><summary>Data Segmentation and Refresh</summary>
-  
+#### Segmentation
+- Drag and Drop Segmentation
+  - Drag and Drop Segmentation works on both lists and data extensions.
+  - You can create random segments based on specific subscriber records or a particular percentage of subscriber records.
+  - You can also create criteria or rules based on fields in the data extension, or a subscriber attribute or list. When the subscriber meets the criteria, they are placed in the filter or data extension. 
+  - When using a list or field in a data extension, drag and drop segmentation will segment subscribers based on their profile data.
 
+#### Data Filter
+- You can use Measures to create filters based on behavioural data e.g. clicks, opens. When you want to create a filtered list or data extension based on behavioural or subscriber profile attributes, you will create a rule with the criteria and save the rule. This rule is called a Data Filter.
+- You can also link up to 3 data extensions together using Data Relationships
   
+#### Refresh Segments
+Filtered segments are a snapshot in time – therefore when new data is added to the list or data extension, the segments need to be refreshed. Ways to refresh segments:
+
+1. Automation Studio Activity
+2. Manually
+
+- Automatic Refresh
+
+Process for creating and automating the refreshing of segments:
+- Create the Data filter – Define the rules and conditions (can be done in Subscribers tab in Email Studio)
+- Create the filter activity – Creates the Filtered Data Extension or a Filtered List (can be created in Automation Studio)
+- Automate via Automation Studio – Place in a workflow to refresh the segments
+  - Query Segmentation – Activity to retrieve a data extension or system data view information that matches your criteria. System data view tables contain behavioural information such as opens, clicks, and bounces.  Data is retrieved via SQL and results are placed in a resulting data extension. The data extension must be created before defining and executing the query activity.  Example of Query Segmentation – Select * from Subscribers where Age > 40 or Salary > 60000
+
+Note: A query is used for advanced filtering like querying for multiple data views. Is used to link multiple data extensions for filtering.
+
+- Sharing Data across Business Units (BU):
+If an account has multiple business units and an Enterprise Account, assets, as well as objects, can be shared across Business Units. This needs to be configured with Business Unit Access Permissions.
 </details>
 
 <details><summary>Subscribers Management</summary>
