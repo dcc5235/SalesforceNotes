@@ -252,6 +252,7 @@ Sendable Data Extension: A Data extension that you can send emails to. You need 
 </details>
 
 <details><summary>Data Segmentation and Refresh</summary>
+  
 #### Segmentation
 - Drag and Drop Segmentation
   - Drag and Drop Segmentation works on both lists and data extensions.
@@ -284,9 +285,20 @@ If an account has multiple business units and an Enterprise Account, assets, as 
 </details>
 
 <details><summary>Subscribers Management</summary>
-  
 
-  
+#### Profile Centre and Subscription Centre
+- Profile Centre – Allows a subscriber to update their personal information. When an attribute is built on a subscriber unless it is hidden the attribute will appear in the Profile Center. Ex: their home address, billing address, next of kin etc.
+- Subscription Centre – When a list is made public it will appear in the subscription center, and subscribers can either unsubscribe or subscribe to these publications e.g. opt into newsletters, updates, or product offering lists
+- One click Unsubscribe
+
+When the subscriber clicks the link from the email, the system looks up which list the email was sent to and sets the subscriber's status to "Unsubscribed" for that list. If the email was sent to multiple lists the subscriber is on, the system unsubscribes the subscriber from all lists. Meanwhile, the subscriber's browser displays a message that the unsubscribe action was successful and gives the subscriber options to resubscribe or manage other subscriptions.
+
+#### Manage Unsubscribes
+- Global – Subscriber chooses to unsubscribe from every email sent by Marketing Cloud
+- Master – Subscriber chooses to unsubscribe from every email sent by a company/account
+- List Level – Subscriber can choose to unsubscribe from lists (publication lists) via the subscription center.
+
+E.g. if a subscriber specifically unsubscribes from a particular publication list (e.g. newsletters), their status in Marketing Cloud will show unsubscribed from the publication list but Active in Marketing Cloud.
 </details>
 
 <details><summary>Tracking and Reporting</summary>
