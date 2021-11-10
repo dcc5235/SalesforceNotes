@@ -187,8 +187,67 @@ NOTE – You must define the activities in their respective application prior to
 </details>
 
 <details><summary>Data Management</summary>
-  
 
+#### Data Extensions
+- Standard: create custom fields to store data
+- Filtered: filtering fields, measures, and filters for sendable data extensions from a source data extension
+- Random: randomly select subscribers from a source data extension
+  
+Steps to creating data extensions: properties, data retention policy (store or delete data?), and fields.
+
+#### Data Model - Lists & Data Extensions
+  
+1. List-Based Data Model
+Use the list model when:
+- your lists contain 500,000 subscribers or less long term
+- you prefer simplicity over performance
+- you do not require fast import speed
+- you plan to use a limited number of subscriber attributes
+- you use the XML API
+
+2. Data Extension-Based Data Model
+Use the data extension model when:
+- your lists are going to be greater than 500,000 subscribers
+- you support multiple subscriber data sets, with separate definitions
+- you send global messages 
+- you require fast import speeds
+- you implement triggered sends
+- you use the SOAP or REST APIs
+- you prefer a flexible subscription model
+
+Important Lists:
+- Suppression List: List used with guided, user-initiated, and triggered sends. It’s a list of subscribers you don’t want to receive your content (e.g. blacklisted)
+- Exclusion List: Any list, group, or data extension you select to exclude from Send.
+
+#### Key Definitions
+Primary Key: A key in a relational database that is unique for each record. It is a unique identifier, and cannot contain null values. You can have more than 1 primary key, and it uniquely identifies a row in a data extension. It also ensures records are not overwritten when you create an import activity.
+
+Note: You cannot update data in a data extension unless it has a field that can be a Primary Key (i.e. has a Unique Identifier). If you create an Import Activity that tries to update fields on a data extension that does not have a Primary Key, the only option the activity can do is Overwrite the existing data
+
+Subscriber Key: Contains a value that uniquely identifies a subscriber in your system. Can be populated with email address or any other unique value. It also allows for multiple people with the same email address (e.g. a family of 4 using their parent’s email address) in the system as each has their own Subscriber Key in the All Subscribers list.
+
+Subscriber Key Considerations
+
+A Subscriber Key should be implemented for each and every subscriber within your database.
+
+It should NOT change. Reconfiguration of the Subscriber Key takes effort and planning. Therefore, give thought to the value being used and make sure it's going to work for your organization now and long-term.
+
+Keep in mind: the purpose of Subscriber Key is to allow an individual email address to receive more than 1 of the same message. If this is a concern, there are ways to suppress based on email address.
+
+Subscriber Key allows users to change their email address and still retain tracking data in Salesforce Marketing Cloud. Otherwise a new record would need to be created and tracking data would be lost.
+
+Send Relationship: A Send Relationship defines a field in the Sendable data extension to map to Subscriber Key in All Subscribers when sending. E.G. a Data Extension may use Email Address to map to the Subscriber Key in the All Subscribers table, which houses the entire database in Marketing Cloud
+
+Note: If sending to a contact in a data extension that does not have a subscriber key, the system will add them to the All Subscribers list as active and add their email address and a subscriber key to their profile.
+
+Sendable Data Extension: A Data extension that you can send emails to. You need to specify this by relating the field containing the Primary Key to the Subscriber Key. You will also need to check ‘Is Sendable’ when creating the DE.
+  
+#### Importing Data
+  
+- Import Wizard – Step-by-step guide to import data. Import parameters must be defined. It is manually executed.
+- Import Activity – Like the Import Wizard, but a definition that can be saved to be used again. It can be automated via Automation Studio
+- Via API – Executes an import programmatically behind the scenes. Good for 3rd party integrations
+- Marketing Cloud Connect – Connect to Salesforce (Sales cloud, service cloud)
   
 </details>
 
